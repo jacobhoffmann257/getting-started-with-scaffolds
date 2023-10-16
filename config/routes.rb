@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
+  resources :books
   # Routes for the Movie resource:
 
   # CREATE
   post("/movies", { :controller => "movies", :action => "create" })
-          
+  get("/movies/new", {controller: "movies", action: "new"})       
   # READ
   get("/movies", { :controller => "movies", :action => "index" })
   
   get("/movies/:id", { :controller => "movies", :action => "show" })
   
   # UPDATE
-  
+  get("/movies/edit/:id",{controller: "movies", action: "edit"})
   patch("/movies/:id", { :controller => "movies", :action => "update" })
   
   # DELETE
