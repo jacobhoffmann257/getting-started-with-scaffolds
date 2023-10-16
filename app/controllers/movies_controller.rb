@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
     render({template: "movies/new"})
   end
  def edit
-  the_id = params.fetch("id")
+  the_id = params.fetch(:id)
   @the_movie = Movie.where({ :id => the_id }).first
   render({template:"movies/edit"})
   end

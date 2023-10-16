@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get("/movies/:id", { :controller => "movies", :action => "show" })
   
   # UPDATE
-  get("/movies/edit/:id",{controller: "movies", action: "edit"})
+  get("/movies/:id/edit",{controller: "movies", action: "edit"})
   patch("/movies/:id", { :controller => "movies", :action => "update" })
   
   # DELETE
